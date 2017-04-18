@@ -1,0 +1,450 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/caolan/nimble#readme">nimble (v0.0.2)</a>
+</h1>
+<h4>A really tiny functional JavaScript and async flow-control library</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble">module nimble</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.each">
+            function <span class="apidocSignatureSpan">nimble.</span>each
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.filter">
+            function <span class="apidocSignatureSpan">nimble.</span>filter
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.map">
+            function <span class="apidocSignatureSpan">nimble.</span>map
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.parallel">
+            function <span class="apidocSignatureSpan">nimble.</span>parallel
+            <span class="apidocSignatureSpan">(fns, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.reduce">
+            function <span class="apidocSignatureSpan">nimble.</span>reduce
+            <span class="apidocSignatureSpan">(obj, iterator, memo, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.series">
+            function <span class="apidocSignatureSpan">nimble.</span>series
+            <span class="apidocSignatureSpan">(fns, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.each">module nimble.each</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.each.each">
+            function <span class="apidocSignatureSpan">nimble.</span>each
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.filter">module nimble.filter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.filter.filter">
+            function <span class="apidocSignatureSpan">nimble.</span>filter
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.map">module nimble.map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.map.map">
+            function <span class="apidocSignatureSpan">nimble.</span>map
+            <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.parallel">module nimble.parallel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.parallel.parallel">
+            function <span class="apidocSignatureSpan">nimble.</span>parallel
+            <span class="apidocSignatureSpan">(fns, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.reduce">module nimble.reduce</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.reduce.reduce">
+            function <span class="apidocSignatureSpan">nimble.</span>reduce
+            <span class="apidocSignatureSpan">(obj, iterator, memo, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nimble.series">module nimble.series</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nimble.series.series">
+            function <span class="apidocSignatureSpan">nimble.</span>series
+            <span class="apidocSignatureSpan">(fns, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble" id="apidoc.module.nimble">module nimble</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.each" id="apidoc.element.nimble.each">
+        function <span class="apidocSignatureSpan">nimble.</span>each
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">each = function (obj, iterator, callback) {
+    return (callback ? eachParallel: eachSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.filter" id="apidoc.element.nimble.filter">
+        function <span class="apidocSignatureSpan">nimble.</span>filter
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (obj, iterator, callback) {
+    return (callback ? filterParallel: filterSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.map" id="apidoc.element.nimble.map">
+        function <span class="apidocSignatureSpan">nimble.</span>map
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (obj, iterator, callback) {
+    return (callback ? mapAsync(eachParallel): mapSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.parallel" id="apidoc.element.nimble.parallel">
+        function <span class="apidocSignatureSpan">nimble.</span>parallel
+        <span class="apidocSignatureSpan">(fns, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parallel = function (fns, callback) {
+    var results = new fns.constructor();
+    eachParallel(fns, function (fn, k, cb) {
+        fn(function (err) {
+            var v = Array.prototype.slice.call(arguments, 1);
+            results[k] = v.length &lt;= 1 ? v[0]: v;
+            cb(err);
+        });
+    }, function (err) {
+        (callback || function () {})(err, results);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.reduce" id="apidoc.element.nimble.reduce">
+        function <span class="apidocSignatureSpan">nimble.</span>reduce
+        <span class="apidocSignatureSpan">(obj, iterator, memo, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reduce = function (obj, iterator, memo, callback) {
+    return (callback ? reduceSeries: reduceSync)(obj, iterator, memo, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.series" id="apidoc.element.nimble.series">
+        function <span class="apidocSignatureSpan">nimble.</span>series
+        <span class="apidocSignatureSpan">(fns, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">series = function (fns, callback) {
+    var results = new fns.constructor();
+    eachSeries(fns, function (fn, k, cb) {
+        fn(function (err, result) {
+            var v = Array.prototype.slice.call(arguments, 1);
+            results[k] = v.length &lt;= 1 ? v[0]: v;
+            cb(err);
+        });
+    }, function (err) {
+        (callback || function () {})(err, results);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.each" id="apidoc.module.nimble.each">module nimble.each</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.each.each" id="apidoc.element.nimble.each.each">
+        function <span class="apidocSignatureSpan">nimble.</span>each
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">each = function (obj, iterator, callback) {
+    return (callback ? eachParallel: eachSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.filter" id="apidoc.module.nimble.filter">module nimble.filter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.filter.filter" id="apidoc.element.nimble.filter.filter">
+        function <span class="apidocSignatureSpan">nimble.</span>filter
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filter = function (obj, iterator, callback) {
+    return (callback ? filterParallel: filterSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.map" id="apidoc.module.nimble.map">module nimble.map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.map.map" id="apidoc.element.nimble.map.map">
+        function <span class="apidocSignatureSpan">nimble.</span>map
+        <span class="apidocSignatureSpan">(obj, iterator, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">map = function (obj, iterator, callback) {
+    return (callback ? mapAsync(eachParallel): mapSync)(obj, iterator, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.parallel" id="apidoc.module.nimble.parallel">module nimble.parallel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.parallel.parallel" id="apidoc.element.nimble.parallel.parallel">
+        function <span class="apidocSignatureSpan">nimble.</span>parallel
+        <span class="apidocSignatureSpan">(fns, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parallel = function (fns, callback) {
+    var results = new fns.constructor();
+    eachParallel(fns, function (fn, k, cb) {
+        fn(function (err) {
+            var v = Array.prototype.slice.call(arguments, 1);
+            results[k] = v.length &lt;= 1 ? v[0]: v;
+            cb(err);
+        });
+    }, function (err) {
+        (callback || function () {})(err, results);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.reduce" id="apidoc.module.nimble.reduce">module nimble.reduce</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.reduce.reduce" id="apidoc.element.nimble.reduce.reduce">
+        function <span class="apidocSignatureSpan">nimble.</span>reduce
+        <span class="apidocSignatureSpan">(obj, iterator, memo, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reduce = function (obj, iterator, memo, callback) {
+    return (callback ? reduceSeries: reduceSync)(obj, iterator, memo, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nimble.series" id="apidoc.module.nimble.series">module nimble.series</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nimble.series.series" id="apidoc.element.nimble.series.series">
+        function <span class="apidocSignatureSpan">nimble.</span>series
+        <span class="apidocSignatureSpan">(fns, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">series = function (fns, callback) {
+    var results = new fns.constructor();
+    eachSeries(fns, function (fn, k, cb) {
+        fn(function (err, result) {
+            var v = Array.prototype.slice.call(arguments, 1);
+            results[k] = v.length &lt;= 1 ? v[0]: v;
+            cb(err);
+        });
+    }, function (err) {
+        (callback || function () {})(err, results);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
