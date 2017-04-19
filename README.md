@@ -1,4 +1,7 @@
-# api documentation for  [nimble (v0.0.2)](https://github.com/caolan/nimble#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nimble.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nimble) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nimble.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nimble)
+# npmdoc-nimble
+
+#### api documentation for  [nimble (v0.0.2)](https://github.com/caolan/nimble#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-nimble.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-nimble) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-nimble.svg)](https://travis-ci.org/npmdoc/node-npmdoc-nimble)
+
 #### A really tiny functional JavaScript and async flow-control library
 
 [![NPM](https://nodei.co/npm/nimble.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/nimble)
