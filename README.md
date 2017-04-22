@@ -57,7 +57,8 @@
         "type": "git",
         "url": "git://github.com/caolan/nimble.git"
     },
-    "version": "0.0.2"
+    "version": "0.0.2",
+    "bin": {}
 }
 ```
 
